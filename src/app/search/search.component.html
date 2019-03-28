@@ -1,0 +1,6 @@
+<form class="col-sm-8 col-sm-offset-2 search-form">
+  <div class="form-group">
+    <label for="searchbox">Search</label>
+    <input class="col-xs-12" type="text" name="searchbox" id="searchbox" [(ngModel)]="filter" (ngModelChange)="refreshResults($event)"/>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+.hero__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 10px 10px 20px 0px rgba(230,230,230,1);
+}
