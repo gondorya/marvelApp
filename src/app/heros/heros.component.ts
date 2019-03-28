@@ -1,21 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-heros',
   templateUrl: './heros.component.html',
   styleUrls: ['./heros.component.css']
 })
-export class HerosComponent implements OnInit {
+export class HerosComponent {
   selectedHero: string;
   imagePath: string;
   isSelected = false;
 
   @Input() filter: string;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
   onSelect(character) {
     this.selectedHero = character;
