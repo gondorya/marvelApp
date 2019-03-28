@@ -4,5 +4,6 @@
     app-single-hero *ngFor="let character of characters"
     [character]="character"
     (click)="onClick(character)"
+    [ngClass]="{active: isSelectedItem(character) }"
   ></li>
 </ul>

@@ -17,12 +17,13 @@ export class HeroListComponent implements OnInit, OnChanges {
     characters: Character[] = [];
     shown: number = 50;
     total: number = null;
+    activeItem: any;
     @Input() filter: string;
     @Output() selected = new EventEmitter<any>();
 
     constructor(private _marvelService : MarvelService) {}
 
-    ngOnChanges(changes) {
+    ngOnChanges() {
       this.refreshList();
     }
 
@@ -39,5 +40,10 @@ export class HeroListComponent implements OnInit, OnChanges {
 
     onClick(selected) {
       this.selected.emit(selected);
+      this.activeItem = selected;
+    }
+
+    isSelectedItem(item) {
+      return this.activeItem === item;
     }
 }
